@@ -1,0 +1,47 @@
+.bgGenerator(@color_1, @color_2) {
+	background: lighten(@color_1, 10%); /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(lighten(@color_1, 10%), lighten(@color_2, 10%)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(lighten(@color_1, 10%), lighten(@color_2, 10%)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(lighten(@color_1, 10%), lighten(@color_2, 10%)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(lighten(@color_1, 10%), lighten(@color_2, 10%)); /* Standard syntax */
+
+	.temperatureContainer {
+		background: @color_1; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(@color_1, @color_2); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(@color_1, @color_2); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(@color_1, @color_2); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(@color_1, @color_2); /* Standard syntax */
+	}
+}
+
+#test {
+   .bgGenerator(#FF5E3A, #FF2A68);
+}
+
+#clear_sky, #clear {
+	.bgGenerator(#FF5E3A, #FF2A68);
+}
+
+#few_clouds, #scattered_clouds, #clouds {
+    .bgGenerator(#1D77EF, #81F3FD);
+}
+
+#broken_clouds {
+    .bgGenerator(#7AD0EB, #898C90);
+}
+
+#shower_rain, #rain {
+    .bgGenerator(#898C90, #059cdd);
+}
+
+#thunderstorm {
+    .bgGenerator(#52EDC7, #5AC8FB);
+}
+
+#snow {
+    .bgGenerator(#F7F7F7, #059cdd);
+}
+
+#mist {
+    .bgGenerator(#DBDDDE, #898C90);
+}
